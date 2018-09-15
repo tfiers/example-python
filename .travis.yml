@@ -4,8 +4,17 @@ python:
   - 3.6
 
 install:
+  # Install our awesome package
   - pip install .
-  - pip install pytest-cov
+
+  # Measures code coverage
+  - pip install coverage
+
+  # Extension for pytest to help run coverage.py
+  - pip install coverage pytest-cov
+
+  # Coverage report uploader
+  - pip install codecov
 
 script:
   - pytest --cov=awesome
