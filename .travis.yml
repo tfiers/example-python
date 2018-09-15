@@ -5,7 +5,7 @@ python:
 
 install:
   # Install our awesome package
-  - pip install -e .
+  - pip install .
 
   # Upgrade test runner
   - pip install --upgrade pytest
@@ -13,14 +13,14 @@ install:
   # Measures code coverage
   - pip install coverage
 
-  # Extension for pytest to help run coverage.py
+  # Extension for pytest to help run coverage
   - pip install coverage pytest-cov
 
   # Coverage report uploader
   - pip install codecov
 
 script:
-  - pytest --cov=./
+  - pytest --cov
 
 after_success:
   - codecov
